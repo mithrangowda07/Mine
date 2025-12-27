@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>On 24/12/2025</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #1a1a1a, #050505);
+    color: #f5f5f5;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Floating hearts */
+/* .heart {
+    position: fixed;
+    color: rgba(255, 182, 193, 0.25);
+    animation: float 8s linear infinite;
+    font-size: 18px;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh) scale(1); opacity: 0; }
+    10% { opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+} */
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    font-size: 18px;
+    pointer-events: none;
+    opacity: 0.4;
+    animation-name: floatUp;
+    animation-timing-function: linear;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    to {
+        transform: translateY(-110vh) translateX(var(--drift));
+        opacity: 0;
+    }
+}
+
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px 100px;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Title */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #ffb6c1;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+/* Letter card */
+.letter {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(255, 182, 193, 0.08);
+    line-height: 1.9;
+    font-size: 1rem;
+}
+
+/* Paragraph spacing */
+.letter p {
+    margin-bottom: 20px;
+}
+
+/* Emphasis */
+.highlight {
+    color: #ffb6c1;
+    font-weight: 500;
+}
+
+.signature {
+    margin-top: 40px;
+    text-align: right;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+}
+
+/* Footer glow */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    pointer-events: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<!-- <span class="heart" style="left:10%">🤍</span>
+<span class="heart" style="left:30%">💗</span>
+<span class="heart" style="left:50%">🤍</span>
+<span class="heart" style="left:70%">💖</span>
+<span class="heart" style="left:90%">🤍</span> -->
+<div id="hearts-container"></div>
+
+<script>
+const hearts = ["🤍", "💗", "💖"];
+
+function createHeart() {
+    const heart = document.createElement("span");
+    heart.className = "heart";
+    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 14 + 14 + "px";
+    heart.style.animationDuration = Math.random() * 6 + 6 + "s";
+    heart.style.setProperty("--drift", (Math.random() * 100 - 50) + "px");
+
+    document.getElementById("hearts-container").appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 12000);
+}
+
+setInterval(createHeart, 400);
+</script>
+
+
+<div class="container">
+    <h1>On 24/12/2025</h1>
+    <div class="subtitle">Start of Second Year of Love 💗</div>
+
+    <div class="letter">
+
+        <p><span class="highlight">My love,</span></p>
+
+        <p>
+            What a great start it was — for the 
+            <span class="highlight">second year of our love</span> 🤍
+        </p>
+
+        <p>
+            The letter I wrote for our first year made you so happy, much more than I ever imagined.
+            I never thought you would be in such a happy mood. I actually had another gift planned
+            for you, but I couldn't make it happen, so I made that letter as a gift.
+            Thanks to my lack of resources 😅.
+        </p>
+
+        <p>
+            That gift made me think of writing more letters. It helped me improve my English,
+            develop webpages, and understand that investing time in something meaningful is never a waste.
+            Most importantly, it made <span class="highlight">you</span> happier than I expected —
+            and that means everything to me 💖.
+        </p>
+
+        <p>
+            Okay, now let me talk about <span class="highlight">this special day</span>.
+        </p>
+
+        <p>
+            We were in such a happy mood, and sadly, we slept in different houses 😭
+            (It should have been together). Even though we had only one class at 10,
+            you came at 9 just for me. You were wearing a black top, even though I had told you
+            to wear a shirt for that day — and I was dressed completely in blacks 🖤.
+        </p>
+
+        <p>
+            You were in Classroom 109. Sorry I came late, but I never disappointed you.
+            I hugged you from behind and kissed you so much.
+            Thank you for the kisses — but honestly, it was not enough.
+            We had so much to celebrate, and sadly, we didn't have a proper place 🫠.
+        </p>
+
+        <p>
+            Do you remember what your eyes saw? 👀<br>
+            Do you remember what your hands were holding?<br>
+            Do you remember what your lips touched?<br>
+            Do you remember what your tongue tasted?<br>
+            Do you remember what your teeth did?
+        </p>
+
+        <p>
+            Wow… it was such a good kiss — and not the only one.
+            It was our <span class="highlight">first time for lips</span>.
+            Thank you so much for that 🤍.
+        </p>
+
+        <p>
+            Do you remember how I kissed all over your face, your hands,
+            your palm, your fingers, your feet?<br>
+            You are my <span class="highlight">princess</span> 👑.
+        </p>
+
+        <p>
+            After some time, we went to attend the class. Even though my friends were around me,
+            laughing and teasing the teacher, and even though the teacher was teaching,
+            the only thing I kept thinking about was <span class="highlight">you</span>
+            and what we had done for the first time.
+        </p>
+
+        <p>
+            After the class, we went for a long walk to a small café called
+            <span class="highlight">Haus of Desserts</span>.
+            Our walks are never boring because we talk about everything —
+            about dreams, family, future.
+            I personally enjoy walking with you more than anything 🚶‍♂️🚶‍♀️.
+        </p>
+
+        <p>
+            Even though the café was 2.2 km away, and even though you were on your periods,
+            it never felt difficult. It was such a comfortable and enjoyable walk with you 🤍.
+        </p>
+
+        <p>
+            Finally, we reached the café. We first planned to have something spicy,
+            so we ordered <b>Creamy Red Sauce Pasta</b> and a <b>Cheese Corn Sandwich</b>.
+            They took a long time to serve the food.
+        </p>
+
+        <p>
+            That day, I actually liked the pasta. It was good — more Italian,
+            but adjusted for Indian taste. It was very creamy and felt great.
+            The main reason was that <span class="highlight">you were feeding me</span> 😌.
+            Thank you for that. But the problem is, when you feed me,
+            you don't eat properly 😠😠 — so I think I need to make some rules.
+        </p>
+
+        <p>
+            Then came the sandwich. To reduce the waiting time,
+            before finishing the food, we ordered <b>Dark Waffle</b>
+            and <b>Hot Brownie with Hot Chocolate Fudge</b> 🍫.
+        </p>
+
+        <p>
+            The sandwich was okay — not the best I've had —
+            but the special thing was that <span class="highlight">you were feeding me</span>,
+            and that's all that matters.
+        </p>
+
+        <p>
+            When it comes to sweets, both the waffle and the brownie were really good.
+            And yes, the thing you found out that day is true 😄 —
+            I love chocolate more than you 🍫.
+        </p>
+
+        <p>
+            Thank you so much for such a beautiful date, my darling.
+            It was the first time we spent that much money on a single date,
+            and it was totally worth it 💕.
+        </p>
+
+        <p>
+            Then we took the bus to RR Gate from RR Temple.
+            I came with you in the metro up to Cubbon Park for just ₹10 —
+            that's how I always come with you in the metro.
+        </p>
+
+        <p>
+            We talked a lot in the metro about what we did in the classroom.
+            I think I asked you to explain it more than a hundred times
+            because it was short and so sweet.
+            And the same thing continued on calls until you reached home.
+        </p>
+
+        <p>
+            I wanted to text you the whole evening and night until you slept.
+            My friends dragged me to a movie, but still,
+            I texted you from 11:15 PM to 1:00 AM,
+            talking about our past and about the day 🤍.
+        </p>
+
+        <p>
+            This was the <span class="highlight">cutest and best celebration</span>
+            of our first year of love.<br>
+            Truly the <span class="highlight">best day of 2025</span> for me.
+        </p>
+
+        <p>
+            Thank you for everything. Without your efforts,
+            it wouldn't have been such a beautiful day.
+            Even though you were on your periods,
+            you gave your best to make this day special 🤍.
+        </p>
+
+        <p>
+            We missed 😢 visiting the temple because of that —
+            next time, we will definitely go.
+        </p>
+
+        <p>
+            Thank you so much, <span class="highlight">my wife</span>.<br>
+            You are only mine.
+        </p>
+
+        <p>
+            <span class="highlight">I love you so much, my darling 💖.</span>
+        </p>
+
+        <p>
+            Please promise me one thing —<br>
+            <span class="highlight">you will never leave me alone in this world</span> 🤍.
+        </p>
+
+        <div class="signature">
+            Always yours 🤍
+        </div>
+
+    </div>
+</div>
+
+<div class="footer"></div>
+
+</body>
+</html>
